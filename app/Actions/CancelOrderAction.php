@@ -1,0 +1,1 @@
+<?php namespace App\Actions; use App\Models\Order; use DomainException; class CancelOrderAction { public function execute(Order $order): Order { if ($order->status !== 'Pending') { throw new DomainException('Only Pending orders can be cancelled.'); } $order->update(['status' => 'Cancelled']); return $order; } }

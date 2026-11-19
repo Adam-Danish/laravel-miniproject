@@ -1,0 +1,1 @@
+<?php namespace Database\Factories; use App\Models\User; use Illuminate\Database\Eloquent\Factories\Factory; class StallFactory extends Factory { public function definition(): array { return ['user_id' => User::factory(['role' => 'vendor']), 'name' => fake()->company(), 'location' => 'Canteen A', 'status' => 'active']; } }

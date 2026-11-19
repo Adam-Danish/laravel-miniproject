@@ -1,0 +1,1 @@
+<?php namespace App\Livewire\Admin; use App\Models\Order; use Livewire\Attributes\Layout; use Livewire\Component; #[Layout('layouts.app')] class ManageAllOrders extends Component { public function render() { return view('livewire.admin.manage-all-orders', ['orders' => Order::with(['user', 'stall'])->latest()->get()]); } }

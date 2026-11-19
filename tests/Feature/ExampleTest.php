@@ -1,0 +1,1 @@
+<?php test('home redirects to menu', function () { $this->get('/')->assertRedirect('/menu'); });
